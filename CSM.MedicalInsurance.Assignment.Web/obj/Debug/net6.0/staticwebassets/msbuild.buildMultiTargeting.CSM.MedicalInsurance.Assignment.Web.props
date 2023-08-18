@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CSM.MedicalInsurance.Assignment.Web.props" />
+</Project>

@@ -1,0 +1,208 @@
+﻿@model PatientInsuranceViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("SubmitRequest", "PatientInsurance", FormMethod.Post))
+{
+    <div style="width:100%;padding:5px;">
+        <div class="PageHeaderSection" style="height:100%;position:unset;">
+             <div class="card">
+        <div class="card-body bg-info text-white text-center"><h4>Patient Insurance Details</h4></div>
+        </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label asp-for="PatientList" class="control-label"></label>
+                            @Html.DropDownList("SelectedPatient",Model.PatientList as List<SelectListItem>,"Select Patient", new { @class = "form-control" })
+                        </div>
+                        @*<div class="col-md-3">
+                    <input type="submit" id="btnFetchPatientInsurance" name="Submit" value="Show Insurance Details" class="btn btn-primary SubmitButton" onclick="return ValidateSearch();" />
+                    </div>*@
+                        
+                    </div>
+                    @if (Model.PatientInsuranceDetails != null)
+                    {
+                        <div class="row" style="padding:5px;">
+                            <div class="col-md-3">
+
+                                <input type="submit" id="btnNotifyInsuranceCompany" name="Submit" value="Create PDF and Send that PDF to Insurance Company" class="btn btn-primary SubmitButton" onclick="return ValidateSearch();" />
+
+                            </div>
+                        </div>
+                    }
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+}
+
+
+@if (Model.PatientInsuranceDetails != null)
+{
+
+    <div>
+        <div>
+            <h4>Insurance Claim details</h4>
+            <hr />
+            <dl class="row">
+
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.InsuranceCompanyName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.InsuranceCompanyName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.DateOfInsurance)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.DateOfInsurance)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.Scheme)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.Scheme)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.CoverPercentage)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.CoverPercentage)
+                </dd>
+
+
+            </dl>
+        </div>
+
+        <div id="EmployeeMarksGrid" style="min-width:100%;overflow:auto;height:300px;padding-top:10px;">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr style="background-color:lightblue;color:black;font-family:Arial;font-size:11px;font-weight:bold;">
+                        <th>Sl.No</th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DefaultBillingDetails.DateOfBilling)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DefaultBillingDetails.Perticular)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DefaultBillingDetails.Amount)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DefaultBillingDetails.CoverPercentage)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DefaultBillingDetails.CoveredAmount)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DefaultBillingDetails.SelfPaidAmount)
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.PatientInsuranceDetails == null || Model.PatientInsuranceDetails.PatientBillings == null || Model.PatientInsuranceDetails.PatientBillings.Count <= 0)
+                    {
+                        <tr style="min-width:100%;"><td colspan="7">No records found</td></tr>
+                    }
+                    else
+                    {
+                        @foreach (var item in Model.PatientInsuranceDetails.PatientBillings.Select((x, i) => new { Data = x, Index = i + 1 }))
+                        {
+                            <tr>
+                                <td>
+                                    @item.Index
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Data.DateOfBilling)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Data.Perticular)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Data.Amount)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Data.CoverPercentage)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Data.CoveredAmount)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Data.SelfPaidAmount)
+                                </td>
+
+                            </tr>
+                        }
+                        <tr style="background-color:lightgray;color:black;font-family:Arial;font-size:11px;font-weight:bold;">
+                            <td>
+                            </td>
+                            <td>
+                                Total
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.PatientInsuranceDetails.BillingTotal.TotalAmount)
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.PatientInsuranceDetails.BillingTotal.TotalCoveredAmount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.PatientInsuranceDetails.BillingTotal.TotalSelfPaidAmount)
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+}
+
+
+
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    function ValidationSearch() {
+        let selectedPatient = $("#SelectedPatient").prop('selectedIndex');
+        if (selectedPatient <= 0) {
+            alert('Please select a Patient to continue');
+            return false;
+        }
+        return true;
+    }
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#btnNotifyInsuranceCompany").click(function () {
+            $("input[name='GridHtml']").val($("#Grid").html());
+        });
+    });
+    $('#SelectedPatient').on('change', function (event) {
+        //if ($("#SelectedPatient").prop('selectedIndex') > 0) {
+
+            var form = $(event.target).parents('form');
+
+            form.submit();
+        //}
+    });
+</script>

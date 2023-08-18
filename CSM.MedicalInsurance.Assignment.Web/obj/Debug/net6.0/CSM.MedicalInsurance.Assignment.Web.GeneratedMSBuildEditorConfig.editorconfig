@@ -1,0 +1,65 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CSM.MedicalInsurance.Assignment.Web
+build_property.RootNamespace = CSM.MedicalInsurance.Assignment.Web
+build_property.ProjectDir = D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Web\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Projects/CSM.MedicalInsurance.Assignment/CSM.MedicalInsurance.Assignment.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CSM.MedicalInsurance.Assignment/CSM.MedicalInsurance.Assignment.Web/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CSM.MedicalInsurance.Assignment/CSM.MedicalInsurance.Assignment.Web/Views/PatientInsurance/Hello.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudEluc3VyYW5jZVxIZWxsby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CSM.MedicalInsurance.Assignment/CSM.MedicalInsurance.Assignment.Web/Views/PatientInsurance/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudEluc3VyYW5jZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CSM.MedicalInsurance.Assignment/CSM.MedicalInsurance.Assignment.Web/Views/PatientInsurance/InsuranceClaimReceipt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF0aWVudEluc3VyYW5jZVxJbnN1cmFuY2VDbGFpbVJlY2VpcHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CSM.MedicalInsurance.Assignment/CSM.MedicalInsurance.Assignment.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CSM.MedicalInsurance.Assignment/CSM.MedicalInsurance.Assignment.Web/Views/Shared/_CustomMessagePartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DdXN0b21NZXNzYWdlUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CSM.MedicalInsurance.Assignment/CSM.MedicalInsurance.Assignment.Web/Views/Shared/_PatientInsuranceDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYXRpZW50SW5zdXJhbmNlRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CSM.MedicalInsurance.Assignment/CSM.MedicalInsurance.Assignment.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CSM.MedicalInsurance.Assignment/CSM.MedicalInsurance.Assignment.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CSM.MedicalInsurance.Assignment/CSM.MedicalInsurance.Assignment.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/CSM.MedicalInsurance.Assignment/CSM.MedicalInsurance.Assignment.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-7zj2wv9917

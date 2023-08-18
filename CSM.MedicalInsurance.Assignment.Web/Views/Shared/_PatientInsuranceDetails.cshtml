@@ -1,0 +1,198 @@
+﻿@model PatientInsuranceViewModel
+<div align="center" style="width:auto;margin-left:20px;margin-right:20px;">
+
+    <div align="center" style="border-style:outset; border-color:greenyellow;  border-width: 5px;">
+        <div align="center">
+            <img src="@Model.HospitalDetails.Logo" />
+
+        </div>
+        <h1 style="font-size:45px;font-family: Verdana;font-weight:bold;">@Model.HospitalDetails.Name</h1>
+
+        <div id="HospitalDetails" align="center">
+            <div style="margin-top:10px;margin-bottom:10px;font-family:Verdana;font-weight:normal;">
+                @Model.HospitalDetails.Area,@Model.HospitalDetails.Street,@Model.HospitalDetails.City-@Model.HospitalDetails.PinCode
+            </div>
+            <div style="margin-top:10px;margin-bottom:10px;font-family:Verdana;font-weight:normal;">
+                Phone : @Model.HospitalDetails.Phone,Email : @Model.HospitalDetails.Email
+            </div>
+
+        </div>
+        <hr style="color:darkblue;height:5px; margin-top:20px;" />
+        <table style="width:auto;margin-left:40%;" cellspacing="5">
+            <tr style="height:15px;">
+                <td style=" width: auto;text-align: left;font-family: Verdana;font-weight:bold;">
+                    Invoice No :
+                </td>
+                <td style="width: auto;text-align: left;font-family: Verdana;font-weight:normal;">
+                    @Model.PatientInsuranceDetails.PatientDetails.PatientId
+                </td>
+
+            </tr>
+            <tr style="height:15px;">
+                <td style=" width: auto;text-align: left;font-family: Verdana;font-weight:bold;">
+                    Invoice Date :
+                </td>
+                <td style="width: auto;text-align: left;font-family: Verdana;font-weight:normal;">
+                    @System.DateTime.Now.ToString("dd-MMM-yyyy")
+                </td>
+
+            </tr>
+        </table>
+
+        <div id="InsuranceCompanyDetails" align="center" style="margin-top:10px;">
+            <table style=" border-style: double;border-color: gray;border-width: 5px;width: 90%;" cellspacing="5">
+                <tr style="height:15px;">
+                    <td style=" width: 25%;text-align: left;font-family: Verdana;font-weight:bold;">
+                        @Html.DisplayNameFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.InsuranceCompanyName) <span>:</span>
+                    </td>
+                    <td style="width: 25%;text-align: left;font-family: Verdana;font-weight:normal;">
+                        @Html.DisplayFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.InsuranceCompanyName)
+                    </td>
+                    <td style=" width: 25%;text-align: left;font-family: Verdana;font-weight:bold;">
+                        @Html.DisplayNameFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.DateOfInsurance) <span>:</span>
+                    </td>
+                    <td style="width: 25%;text-align: left;font-family: Verdana;font-weight:normal;">
+                        @Html.DisplayFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.DateOfInsurance)
+                    </td>
+                </tr>
+                <tr style="height:15px;">
+                    <td style=" width: 25%;text-align: left;font-family: Verdana;font-weight:bold;">
+                        @Html.DisplayNameFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.Scheme) <span>:</span>
+                    </td>
+                    <td style="width: 25%;text-align: left;font-family: Verdana;font-weight:normal;">
+                        @Html.DisplayFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.Scheme)
+                    </td>
+                    <td style=" width: 25%;text-align: left;font-family: Verdana;font-weight:bold;">
+                        @Html.DisplayNameFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.CoverPercentage) <span>:</span>
+                    </td>
+                    <td style="width: 25%;text-align: left;font-family: Verdana;font-weight:normal;">
+                        @Html.DisplayFor(model => model.PatientInsuranceDetails.InsuranceCompanyDetails.CoverPercentage)
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="PatientDetails" align="center" style="margin-top:10px;">
+            <table style=" border-style: double;border-color: gray;border-width: 5px;width: 90%;" cellspacing="5">
+                <tr style="height:15px;">
+                    <td style=" width: 25;text-align: left;font-family: Verdana;font-weight:bold;">
+                        @Html.DisplayNameFor(model => model.PatientInsuranceDetails.PatientDetails.PatientName) <span>:</span>
+                    </td>
+                    <td style=" width: 25%;text-align: left;font-family: Verdana;font-weight:normal;">
+                        @Html.DisplayFor(model => model.PatientInsuranceDetails.PatientDetails.PatientName)
+                    </td>
+                    <td style=" width: 25%;text-align: left;font-family: Verdana;font-weight:bold;">
+                        @Html.DisplayNameFor(model => model.PatientInsuranceDetails.PatientDetails.PatientAddress) <span>:</span>
+                    </td>
+                    <td style=" width: 25%;text-align: left;font-family: Verdana;font-weight:normal;">
+                        @Html.DisplayFor(model => model.PatientInsuranceDetails.PatientDetails.PatientAddress)
+                    </td>
+                </tr>
+                <tr style="height:15px;">
+                    <td style=" width: 25%;text-align: left;font-family: Verdana;font-weight:bold;">
+                        @Html.DisplayNameFor(model => model.PatientInsuranceDetails.PatientDetails.PatientPhoneNumber) <span>:</span>
+                    </td>
+                    <td style=" width: 25%;text-align: left;font-family: Verdana;font-weight:normal;">
+                        @Html.DisplayFor(model => model.PatientInsuranceDetails.PatientDetails.PatientPhoneNumber)
+                    </td>
+                    <td style=" width: 25%;text-align: left;font-family: Verdana;font-weight:bold;">
+                        @Html.DisplayNameFor(model => model.PatientInsuranceDetails.PatientDetails.PatientEmail) <span>:</span>
+                    </td>
+                    <td style=" width: 25%;text-align: left;font-family: Verdana;font-weight:normal;">
+                        @Html.DisplayFor(model => model.PatientInsuranceDetails.PatientDetails.PatientEmail)
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="PatientBillingDetails" style="width:95%;overflow:auto;height:auto;padding:5px;">
+
+            <table style=" border-style:groove;border-color: gray;border-width: 5px;width: 95%;">
+                <thead>
+                    <tr style="background-color:lightblue;color:black;font-family:Arial;font-size:11px;font-weight:bold;">
+                        <th>Sl.No</th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DefaultBillingDetails.DateOfBilling)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DefaultBillingDetails.Perticular)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DefaultBillingDetails.Amount)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DefaultBillingDetails.CoverPercentage)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DefaultBillingDetails.CoveredAmount)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DefaultBillingDetails.SelfPaidAmount)
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.PatientInsuranceDetails == null || Model.PatientInsuranceDetails.PatientBillings == null || Model.PatientInsuranceDetails.PatientBillings.Count <= 0)
+                    {
+                        <tr style="min-width:95%;"><td colspan="7">No records found</td></tr>
+                    }
+                    else
+                    {
+                        @foreach (var item in Model.PatientInsuranceDetails.PatientBillings.Select((x, i) => new { Data = x, Index = i + 1 }))
+                        {
+                            <tr>
+                                <td>
+                                    @item.Index
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Data.DateOfBilling)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Data.Perticular)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Data.Amount)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Data.CoverPercentage)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Data.CoveredAmount)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Data.SelfPaidAmount)
+                                </td>
+
+                            </tr>
+                        }
+                        <tr style="background-color:lightgray;color:black;font-family:Arial;font-size:11px;font-weight:bold;">
+                            <td>
+                            </td>
+                            <td>
+                                Total
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.PatientInsuranceDetails.BillingTotal.TotalAmount)
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.PatientInsuranceDetails.BillingTotal.TotalCoveredAmount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => Model.PatientInsuranceDetails.BillingTotal.TotalSelfPaidAmount)
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+        <h5 style="color:green;font-family:Verdana;font-size:12px;font-weight:bold; margin-top:20px;">Computer Generated Invoice does not Need Signature</h5>
+    </div>
+
+</div>

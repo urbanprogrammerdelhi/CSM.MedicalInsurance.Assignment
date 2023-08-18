@@ -1,0 +1,12 @@
+D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Models\bin\Debug\net6.0\CSM.MedicalInsurance.Assignment.Models.deps.json
+D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Models\bin\Debug\net6.0\CSM.MedicalInsurance.Assignment.Models.dll
+D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Models\bin\Debug\net6.0\CSM.MedicalInsurance.Assignment.Models.pdb
+D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Models\obj\Debug\net6.0\CSM.MedicalInsurance.Assignment.Models.csproj.AssemblyReference.cache
+D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Models\obj\Debug\net6.0\CSM.MedicalInsurance.Assignment.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Models\obj\Debug\net6.0\CSM.MedicalInsurance.Assignment.Models.AssemblyInfoInputs.cache
+D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Models\obj\Debug\net6.0\CSM.MedicalInsurance.Assignment.Models.AssemblyInfo.cs
+D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Models\obj\Debug\net6.0\CSM.MedicalInsurance.Assignment.Models.csproj.CoreCompileInputs.cache
+D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Models\obj\Debug\net6.0\CSM.MedicalInsurance.Assignment.Models.dll
+D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Models\obj\Debug\net6.0\refint\CSM.MedicalInsurance.Assignment.Models.dll
+D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Models\obj\Debug\net6.0\CSM.MedicalInsurance.Assignment.Models.pdb
+D:\Projects\CSM.MedicalInsurance.Assignment\CSM.MedicalInsurance.Assignment.Models\obj\Debug\net6.0\ref\CSM.MedicalInsurance.Assignment.Models.dll
