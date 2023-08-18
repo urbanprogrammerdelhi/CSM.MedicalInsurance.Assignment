@@ -42,7 +42,7 @@ namespace CSM.MedicalInsurance.Assignment.Web.Controllers
         {
             try
             {
-                MessageBody message = new MessageBody { Attachment = attachment, AttachmentName = attachmentName, Receiver = "professionalkalyan@gmail.com" };//vm.PatientInsuranceDetails.InsuranceCompanyDetails.InsuranceContactEmail };
+                MessageBody message = new MessageBody { Attachment = attachment, AttachmentName = attachmentName, Receiver = vm.PatientInsuranceDetails.InsuranceCompanyDetails.InsuranceContactEmail };
                 message.EmailSubject = _configuration["EmailUtility:Subject"].ParseToText();
                 string userName = _configuration["EmailUtility:UserName"].ParseToText();
                 string password = _configuration["EmailUtility:Password"].ParseToText();

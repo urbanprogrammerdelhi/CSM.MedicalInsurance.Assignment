@@ -51,14 +51,15 @@ namespace CSM.MedicalInsurance.Assignment.Web.Controllers
                 }
                 TempData["PatientId"] = Request.Form["SelectedPatient"].ParseToText();
                 if(string.IsNullOrEmpty(Submit))
-                    return RedirectToAction("Index");:
-                        return RedirectToAction("NotifyCompany");
+                    return RedirectToAction("Index");
                 switch (Submit)
                 {
                     case "Show Insurance Details":
                         return RedirectToAction("Index");
                         break;
-                    case "Create PDF and Send that PDF to Insurance Company"
+                    case "Create PDF and Send that PDF to Insurance Company":
+                       return RedirectToAction("NotifyCompany");
+
                         break;
                      
                 }
